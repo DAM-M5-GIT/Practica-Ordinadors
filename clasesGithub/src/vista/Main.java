@@ -26,7 +26,7 @@ public class Main {
             System.out.print("Choose you option: \n 1 - Añadir. \n 2 - Buscar. "	+ 
             					"\n 3 - Volcar. \n 4 - Recuperar. \n 5 - Modificar. \n 6 - Salir.");
             input = menu.nextInt();
-            }
+            
             
             switch (input) {
             case 1: System.out.println("añadir"); //Añadir();
@@ -48,6 +48,7 @@ public class Main {
             
             default: 
             	break;
+            }
         }
 
 		menuNumeric();
