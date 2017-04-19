@@ -36,7 +36,7 @@ public class Ordinador implements Serializable{
 	}
 	
 	public String toString() {
-		return "Ordenador [Modelo = " + model + ", Tamaño = " + size + ", Cpu = " + cpu + ", RAM = " + ram + "]";
+		return "Computer [Model = " + model + ", Size = " + size + ", Cpu = " + cpu + ", RAM = " + ram + "]";
 	}
 	
 	public Ordinador(){};

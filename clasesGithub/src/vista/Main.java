@@ -18,25 +18,25 @@ public class Main {
 
             while(input != 6)
             {
-            System.out.print("Elige una opción: \n 1 - Añadir. \n 2 - Buscar. "	+ 
-            					"\n 3 - Volcar. \n 4 - Recuperar. \n 5 - Modificar. \n 6 - Salir.");
+            System.out.print("Choose your option: \n 1 - Add. \n 2 - Search. "	+ 
+            					"\n 3 - Turn Over . \n 4 - Recovery. \n 5 - Modify. \n 6 - Exit.");
             input = menu.nextInt();
             
             
             switch (input) {
-            case 1: System.out.println("Añadir"); //Añadir();
+            case 1: System.out.println("Add"); //Añadir();
                 break;
 
-            case 2: System.out.println("Buscar");//Buscar();
+            case 2: System.out.println("Search");//Buscar();
                 break;
 
-            case 3: System.out.println("Volcar");//Volcar();
+            case 3: System.out.println("Turn Over");//Volcar();
                 break;
 
-            case 4: System.out.println("Recuperar");//Recuperar();
+            case 4: System.out.println("Recovery");//Recuperar();
                 break;
                 
-            case 5: System.out.println("Modificar");//Modificar();
+            case 5: System.out.println("Modify");//Modificar();
             	break;
             	
             case 6: System.exit(0);
