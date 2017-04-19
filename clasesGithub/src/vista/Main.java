@@ -23,7 +23,7 @@ public class Main {
 
             while(input != 6)
             {
-            System.out.print("Choose you option: \n 1 - Añadir. \n 2 - Buscar. "	+ 
+            System.out.print("Choose your option: \n 1 - Añadir. \n 2 - Buscar. "	+ 
             					"\n 3 - Volcar. \n 4 - Recuperar. \n 5 - Modificar. \n 6 - Salir.");
             input = menu.nextInt();
             
