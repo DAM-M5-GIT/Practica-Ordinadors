@@ -6,20 +6,15 @@ import controlador.Gestor;
 
 public class Main {
 	
-	Scanner menu = new Scanner(System.in);
+	
 
 	public static void main(String[] args) {
 
-		Gestor gest = new Gestor();
-		Main a = new Main();
-		a.menuNumeric();
-	}
-	
-	
-	public  void menuNumeric(){
-
             int input = 0;
      
+            Scanner menu = new Scanner(System.in);
+        	
+        	Gestor gest = new Gestor();
 
             while(input != 6)
             {
@@ -50,8 +45,6 @@ public class Main {
             	break;
             }
         }
-
-		menuNumeric();
 	}
-
 }
+
