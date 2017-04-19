@@ -36,7 +36,7 @@ public class Main {
             case 4: System.out.println("recuperar");//Recuperar();
                 break;
                 
-            case 5: System.out.println("modificar");//Modificar();
+            case 5: gest.modificar();
             	break;
             	
             case 6: System.exit(0);
