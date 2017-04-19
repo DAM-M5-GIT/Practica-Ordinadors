@@ -19,7 +19,7 @@ public class Main {
             while(input != 6)
             {
             System.out.print("Choose your option: \n 1 - Add. \n 2 - Search. "	+ 
-            					"\n 3 - Turn Over . \n 4 - Recovery. \n 5 - Modify. \n 6 - Exit.");
+            					"\n 3 - Save . \n 4 - Recovery. \n 5 - Modify. \n 6 - Exit.");
             input = menu.nextInt();
             
             
@@ -30,7 +30,7 @@ public class Main {
             case 2: System.out.println("Search");//Buscar();
                 break;
 
-            case 3: System.out.println("Turn Over");//Volcar();
+            case 3: System.out.println("Save");//Volcar();
                 break;
 
             case 4: System.out.println("Recovery");//Recuperar();
