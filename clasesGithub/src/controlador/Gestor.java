@@ -45,7 +45,7 @@ public class Gestor {
 		String fitxer = scanner.next();
 		
 		try{
-	
+			
 		}
 		catch(Exception e){
 			System.out.println(e.getMessage());
