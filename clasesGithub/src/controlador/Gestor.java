@@ -6,6 +6,7 @@ import java.util.Scanner;
 import java.util.TreeMap;
 
 import javax.swing.JOptionPane;
+import modelo.Ordinador;
 
 public class Gestor {
 	
@@ -39,7 +40,7 @@ public class Gestor {
 		return 0;
 	}
 	
-	public void guardar(TreeMap tree){
+	public void guardar(TreeMap<String, Ordinador> tree){
 	//El usuario deberá introducir el nombre del fichero en el que guardaremos, y guardaremos el TreeMap directamente	
 		System.out.println("Please, enter the name of the file to save the TreeMap: \n");
 		String fitxer = scanner.next();
