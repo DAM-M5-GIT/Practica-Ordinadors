@@ -8,6 +8,8 @@ import java.util.Scanner;
 import java.util.TreeMap;
 import javax.swing.JOptionPane;
 
+import modelo.Ordinador;
+
 public class Gestor {
 
 	public static void main(String[] args) {
@@ -15,27 +17,30 @@ public class Gestor {
 
 	}
 
-	public void modificar(){
+	public void modificar(TreeMap<String, Ordinador> data ){
 		Scanner in=new Scanner(System.in);
-		Map<String, List <Bus>> karte = new TreeMap<String, List <Bus>>();
+		Map<String, Ordinador> karte = data;
 		
-		System.out.print("Save Changes? ( Y / N )");
-		String input = in.next();
-		
-		if (input == "Y"){
-			try{
-			     ObjectOutputStream out = new ObjectOutputStream(new FileOutputStream("ordinadors.txt"));
-			     out.writeObject(karte);
-			     out.close();
+		System.out.println("INTRODUCE THE MODEL TO MODIFY : ");
+		String model = in.next();
+		if (karte.containsKey(model)){
+			System.out.println("INTRODUCE THE NEW RAM VALUE : ");
+			String ram = in.next();
+			System.out.println("INTRODUCE THE NEW CPU MODEL : ");
+			String cpu = in.next();
+			System.out.println("INTRODUCE THE NEW STORAGE CAPACITY : ");
+			String size = in.next();
+
+			System.out.print("Save Changes? ( Y / N )");
+			String input = in.next();	
+			if (input == "Y"){	
+				Ordinador o = new Ordinador(model, size, cpu, ram);
+				data.put(model, o);		
+			} else{
+				System.out.println("CHANGES HAVE BEEN DISCARDED");
 			}
-			catch(Exception e)
-			{
-			   System.out.println("Error."+e); 
-			}
-						
-		}				
-		
-		else if(input == "N") { modificar();}	
-		
+		} else {
+			System.out.println("THE MODEL DOES NOT EXISTS");
+		}
 	}
 }

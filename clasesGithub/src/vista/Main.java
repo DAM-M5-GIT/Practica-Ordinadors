@@ -1,20 +1,18 @@
 package vista;
 
 import java.util.Scanner;
+import java.util.TreeMap;
 
 import controlador.Gestor;
+import modelo.Ordinador;
 
 public class Main {
-	
-	
-
+	private static TreeMap<String, Ordinador> storage = new TreeMap<String, Ordinador>();
 	public static void main(String[] args) {
 
             int input = 0;
      
             Scanner menu = new Scanner(System.in);
-        	
-        	Gestor gest = new Gestor();
 
             while(input != 6)
             {
@@ -36,9 +34,9 @@ public class Main {
             case 4: System.out.println("recuperar");//Recuperar();
                 break;
                 
-            case 5: gest.modificar();
-            	break;
-            	
+            case 5: 
+            	//tm = gest.modificar(storage);
+            	break;            	
             case 6: System.exit(0);
             
             default: 
