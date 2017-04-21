@@ -1,6 +1,9 @@
 package controlador;
 
 import java.util.Scanner;
+import java.util.TreeMap;
+
+import modelo.Ordinador;
 
 public class Gestor {
 	
@@ -19,7 +22,7 @@ public class Gestor {
 		try{
 			System.out.println("Model: \n");
 			model = scanner.next();
-			System.out.println("Tamaño: \n");
+			System.out.println("Tamaï¿½o: \n");
 			size = scanner.nextInt();
 			System.out.println("Processador: \n");
 			cpu = scanner.next();
@@ -33,4 +36,18 @@ public class Gestor {
 		
 		return 0;
 	}
+	
+	public void Buscar(TreeMap<String, Ordinador> ordenadores){
+		System.out.println("Buscar por nombre de modelo: ");
+		String model = scanner.next();
+
+		if(ordenadores.containsKey(model)){
+			ordenadores.get(model).toString();
+		}else{
+		System.out.println("No existe este modelo");
+		}
+
+	}
+
+
 }

@@ -24,10 +24,11 @@ public class Main {
             
             
             switch (input) {
-            case 1: System.out.println("Add"); //Añadir();
+            case 1: System.out.println("Add"); //Aï¿½adir();
                 break;
 
             case 2: System.out.println("Search");//Buscar();
+            	//gest.Buscar(tm);
                 break;
 
             case 3: System.out.println("Save");//Volcar();
