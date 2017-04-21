@@ -45,7 +45,9 @@ public class Gestor {
 		String fitxer = scanner.next();
 		
 		try{
-
+			ObjectOutputStream out = new ObjectOutputStream(new FileOutputStream(fitxer));
+			   out.writeObject(tree);
+			   out.close();
 		}
 		catch(Exception e){
 			System.out.println(e.getMessage());
