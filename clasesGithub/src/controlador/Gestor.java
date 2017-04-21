@@ -33,17 +33,17 @@ public class Gestor {
     }
 
 //    Function Edra
-    public void list(TreeMap taula) {
+    public void list(TreeMap tree) {
         try {
-            if (taula.isEmpty()) {
+            if (tree.isEmpty()) {
                 System.out.println("The table is empty.");
             } else {
-                Set<String> keys = taula.keySet();
+                Set<String> keys = tree.keySet();
                 String message = "";
                 for (String key : keys) {
-                    message = message + " | MODELO: " + taula.get(key).getModelo() + " | RAM: " + taula.get(key).getRam()
-                            + " | DISCO DURO: " + taula.get(key).getDiscoduro() + "  | PROCESADOR: "
-                            + taula.get(key).getProcesador() + "\n";
+                    message = message & " | MODEL: " + tree.get(key).getModel() + " | SIZE: " + tree.get(key).getSize()
+                            + " | RAM: " + tree.get(key).getRam() + "  | CPU: "
+                            + tree.get(key).getCpu() + "\n";
                 }
                 System.out.println(message);
             }
