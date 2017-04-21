@@ -4,6 +4,7 @@ import java.util.Scanner;
 import java.util.TreeMap;
 
 import controlador.Gestor;
+import modelo.Ordinador;
 
 public class Main {
 	
@@ -19,7 +20,7 @@ public class Main {
         	Gestor gest = new Gestor();
         	
         	//DECLARACIÓN DEL TREEMAP
-        	TreeMap tm = new TreeMap();
+        	TreeMap<String, Ordinador> tm = new TreeMap<String, Ordinador>();
 
             while(input != 6)
             {
