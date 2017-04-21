@@ -33,7 +33,7 @@ public class Gestor {
     }
 
 //    Function Edra
-    public void list(TreeMap tree) {
+    public void list(TreeMap<String, Ordinador> tree) {
         try {
             if (tree.isEmpty()) {
                 System.out.println("The table is empty.");
