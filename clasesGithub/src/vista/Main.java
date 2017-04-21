@@ -35,7 +35,7 @@ public class Main {
                 break;
                 
             case 5: 
-            	//tm = gest.modificar(storage);
+            	//tm = gest.modificar(tm);
             	break;            	
             case 6: System.exit(0);
             

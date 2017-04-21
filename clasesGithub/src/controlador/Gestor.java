@@ -19,11 +19,10 @@ public class Gestor {
 
 	public void modificar(TreeMap<String, Ordinador> data ){
 		Scanner in=new Scanner(System.in);
-		Map<String, Ordinador> karte = data;
-		
+	
 		System.out.println("INTRODUCE THE MODEL TO MODIFY : ");
 		String model = in.next();
-		if (karte.containsKey(model)){
+		if (data.containsKey(model)){
 			System.out.println("INTRODUCE THE NEW RAM VALUE : ");
 			String ram = in.next();
 			System.out.println("INTRODUCE THE NEW CPU MODEL : ");
