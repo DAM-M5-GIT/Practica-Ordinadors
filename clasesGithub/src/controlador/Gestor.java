@@ -17,7 +17,7 @@ public class Gestor {
 
 	}
 
-	public void modificar(TreeMap<String, Ordinador> data ){
+	public TreeMap<String, Ordinador> modificar(TreeMap<String, Ordinador> data ){
 		Scanner in=new Scanner(System.in);
 	
 		System.out.println("INTRODUCE THE MODEL TO MODIFY : ");
@@ -41,5 +41,6 @@ public class Gestor {
 		} else {
 			System.out.println("THE MODEL DOES NOT EXISTS");
 		}
+		return data;
 	}
 }
