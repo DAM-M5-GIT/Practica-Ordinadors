@@ -3,6 +3,7 @@ package controlador;
 import java.io.FileOutputStream;
 import java.io.ObjectOutputStream;
 import java.util.Scanner;
+import java.util.Set;
 import java.util.TreeMap;
 import modelo.Ordinador;
 
@@ -45,7 +46,7 @@ public class Gestor {
                 Set<String> keys = tree.keySet();
                 String message = "";
                 for (String key : keys) {
-                    message = message & " | MODEL: " + tree.get(key).getModel() + " | SIZE: " + tree.get(key).getSize()
+                    message = message + " | MODEL: " + tree.get(key).getModel() + " | SIZE: " + tree.get(key).getSize()
                             + " | RAM: " + tree.get(key).getRam() + "  | CPU: "
                             + tree.get(key).getCpu() + "\n";
                 }
