@@ -44,11 +44,11 @@ public class Main {
             case 4: System.out.println("Save");//Guardar();
             		gest.guardar(tm);
                 break;
-
             case 5: System.out.println("OpenFile");//Recuperar();
                 break;
                 
             case 6: System.out.println("Modify");//Modificar();
+            	gest.modificar(tm);
             	break;
             	
             case 7: System.exit(0);
@@ -59,4 +59,3 @@ public class Main {
         }
 	}
 }
-
