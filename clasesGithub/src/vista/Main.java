@@ -1,54 +1,57 @@
 package vista;
 
-import java.util.Scanner;
-import java.util.TreeMap;
-
 import controlador.Gestor;
 import modelo.Ordinador;
 
+import java.util.Scanner;
+import java.util.TreeMap;
+
 public class Main {
 	
-	// MENÚ PRINCIPAL
+	// MENï¿½ PRINCIPAL
 	public static void main(String[] args) {
 
-            int input = 0; // VARIABLE DE USO PARA SELECCIÓN DE OPCIONES
+            int input = 0; // VARIABLE DE USO PARA SELECCIï¿½N DE OPCIONES
      
-            //DECLARACiÓN DE SCANNER PARA LECTURA DE OPCIONES TECLEADAS
+            //DECLARACiï¿½N DE SCANNER PARA LECTURA DE OPCIONES TECLEADAS
             Scanner menu = new Scanner(System.in);
         	
-            //DECLARACIÓN DEL GESTOR PARA EL USO DE MÉTODOS DEL MISMO
+            //DECLARACIï¿½N DEL GESTOR PARA EL USO DE Mï¿½TODOS DEL MISMO
         	Gestor gest = new Gestor();
         	
-        	//DECLARACIÓN DEL TREEMAP
+        	//DECLARACIï¿½N DEL TREEMAP
         	TreeMap<String, Ordinador> tm = new TreeMap<String, Ordinador>();
 
             while(input != 6)
             {
-            	//MUESTRA DE OPCIONES DEL MENÚ
-            System.out.print("Choose your option: \n 1 - Add. \n 2 - Search. "	+ 
-            					"\n 3 - Save . \n 4 - Open file. \n 5 - Modify. \n 6 - Exit.");
+            	//MUESTRA DE OPCIONES DEL MENï¿½
+            System.out.print("Choose your option: \n 1 - Add. \n 2 - Search. \n 3 - List. "	+
+            					"\n 4 - Save . \n 5 - Open file. \n 6 - Modify. \n 7 - Exit.");
             input = menu.nextInt();
             
             //USO DE SWICH PARA EL DIRECCIONAMIENTO DE LAS OPCIONES SELLECIONADAS
             switch (input) {
-            case 1: System.out.println("Add"); //Añadir();
+            case 1: System.out.println("Add"); //Aï¿½adir();
                 break;
 
             case 2: System.out.println("Search");//Buscar();
                 break;
 
-            case 3: System.out.println("save");//Guardar();
-            		gest.guardar(tm);
-
+            case 3: System.out.println("List");//Llistar();
+                    gest.list(tm);
                 break;
 
-            case 4: System.out.println("OpenFile");//Recuperar();
+            case 4: System.out.println("Save");//Guardar();
+            		gest.guardar(tm);
+                break;
+
+            case 5: System.out.println("OpenFile");//Recuperar();
                 break;
                 
-            case 5: System.out.println("Modify");//Modificar();
+            case 6: System.out.println("Modify");//Modificar();
             	break;
             	
-            case 6: System.exit(0);
+            case 7: System.exit(0);
             
             default: 
             	break;
