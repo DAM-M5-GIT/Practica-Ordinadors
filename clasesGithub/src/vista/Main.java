@@ -37,7 +37,9 @@ public class Main {
             case 2: System.out.println("Search");//Buscar();
                 break;
 
-            case 3: System.out.println("Save");//Volcar();
+            case 3: System.out.println("save");//Guardar();
+            		gest.guardar(tm);
+
                 break;
 
             case 4: System.out.println("OpenFile");//Recuperar();
