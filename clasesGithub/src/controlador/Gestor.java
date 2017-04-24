@@ -1,7 +1,8 @@
 package controlador;
 
-import java.util.Scanner;
 import modelo.Ordinador;
+
+import java.util.Scanner;
 
 public class Gestor {
 
