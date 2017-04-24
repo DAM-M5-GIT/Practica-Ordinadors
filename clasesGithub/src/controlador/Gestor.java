@@ -1,8 +1,10 @@
 package controlador;
 
-import modelo.Ordinador;
-
+import java.io.FileOutputStream;
+import java.io.ObjectOutputStream;
 import java.util.Scanner;
+import java.util.TreeMap;
+import modelo.Ordinador;
 
 public class Gestor {
 
@@ -54,4 +56,19 @@ public class Gestor {
         }
 
     }
+
+	public void guardar(TreeMap<String, Ordinador> tree){
+	//El usuario deber� introducir el nombre del fichero en el que guardaremos, y guardaremos el TreeMap directamente
+		System.out.println("Please, enter the name of the file to save the TreeMap: \n");
+		String fitxer = scanner.next();
+
+		try{
+			ObjectOutputStream out = new ObjectOutputStream(new FileOutputStream(fitxer));
+			   out.writeObject(tree);
+			   out.close();
+		}
+		catch(Exception e){
+			System.out.println(e.getMessage());
+		}
+	}
 }
