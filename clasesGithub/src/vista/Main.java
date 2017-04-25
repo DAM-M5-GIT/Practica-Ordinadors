@@ -45,6 +45,8 @@ public class Main {
             		gest.guardar(tm);
                 break;
             case 5: System.out.println("OpenFile");//Recuperar();
+		            tm.clear();
+		            gest.restoreData(tm);
                 break;
                 
             case 6: System.out.println("Modify");//Modificar();
