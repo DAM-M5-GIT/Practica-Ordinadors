@@ -32,6 +32,7 @@ public class Main {
             //USO DE SWICH PARA EL DIRECCIONAMIENTO DE LAS OPCIONES SELLECIONADAS
             switch (input) {
             case 1: System.out.println("Add"); //A�adir();
+            		gest.add(tm);
                 break;
 
             case 2: System.out.println("Search");//Buscar();

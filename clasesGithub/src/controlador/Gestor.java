@@ -24,20 +24,22 @@ public class Gestor {
 
     }
 
-    public int add() {
+    public int add(TreeMap<String, Ordinador> data) {
         String model = null;
-        Integer size = null;
+        String size = null;
         String cpu = null;
-        Integer ram = null;
+        String ram = null;
         try {
             System.out.println("Model: \n");
             model = scanner.next();
-            System.out.println("Tama�o: \n");
-            size = scanner.nextInt();
-            System.out.println("Processador: \n");
+            System.out.println("Size: \n");
+            size = scanner.next();
+            System.out.println("CPU: \n");
             cpu = scanner.next();
             System.out.println("Ram: \n");
-            ram = scanner.nextInt();
+            ram = scanner.next();
+            Ordinador o = new Ordinador(model, size, cpu, ram);
+			data.put(model, o);
         } catch (Exception e) {
             System.out.println(e);
             return 1;
