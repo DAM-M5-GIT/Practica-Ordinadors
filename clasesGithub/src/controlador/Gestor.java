@@ -3,6 +3,7 @@ package controlador;
 import java.io.FileOutputStream;
 import java.io.ObjectOutputStream;
 import java.io.ObjectInputStream;
+import java.io.File;
 import java.io.FileInputStream;
 
 import java.util.Scanner;
@@ -84,7 +85,7 @@ public class Gestor {
 	}
 	public void restoreData(TreeMap<String, Ordinador> tree)
 	{
-		System.out.println("Please, enter the name of the file to restore data: \n");
+		System.out.println("Enter the file's name which data shall be restored: \n");
 		String file = scanner.next();
 		File fileToRead = new File(file);
 		if(fileToRead.exists())
