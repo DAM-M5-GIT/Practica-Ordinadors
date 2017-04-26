@@ -31,7 +31,7 @@ public class Main {
 		// DECLARACIÓN DEL TREEMAP
 		TreeMap<String, Ordinador> tm = new TreeMap<String, Ordinador>();
 
-		while (input != 6) {
+		while (input != 7) {
 			// MUESTRA DE OPCIONES DEL MENÚ
 			System.out.print("Choose your option: \n 1 - Add. \n 2 - Search. \n 3 - List. "
 					+ "\n 4 - Save . \n 5 - Open file. \n 6 - Modify. \n 7 - Exit.");
