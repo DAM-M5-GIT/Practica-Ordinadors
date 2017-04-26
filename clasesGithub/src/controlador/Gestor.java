@@ -37,14 +37,16 @@ public class Gestor {
 		return 0;
 	}
 	
+	//FUNCION BUSCAR POR MODELO
 	public void Buscar(TreeMap<String, Ordinador> ordenadores){
-		System.out.println("Buscar por nombre de modelo: ");
+		System.out.println("Search model by name: ");
 		String model = scanner.next();
-
+		//MOSTRAR DETALLES DEL PC SI EXISTE EL MODELO
 		if(ordenadores.containsKey(model)){
 			ordenadores.get(model).toString();
 		}else{
-		System.out.println("No existe este modelo");
+			//SI EL MODELO NO EXISTE
+			System.out.println("This model does not exist.");
 		}
 
 	}
