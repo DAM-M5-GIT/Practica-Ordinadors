@@ -74,8 +74,7 @@ public class Main {
 					break;
 				}
 			} catch (Exception e) {
-				System.out.println("Introduce a new model");
-				main(null);
+				System.out.println("No letters allowd");
 			}
 		}
 	}
