@@ -75,6 +75,7 @@ public class Main {
 				}
 			} catch (Exception e) {
 				System.out.println("No letters allowd");
+				main(null);
 			}
 		}
 	}
