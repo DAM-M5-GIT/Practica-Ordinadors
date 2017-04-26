@@ -36,6 +36,9 @@ public class Gestor {
 			System.out.println("Size: \n");
 			size = scanner.next();
 			System.out.println("CPU: \n");
+			System.out.println("Tama�o: \n");
+			size = scanner.next();
+			System.out.println("Processador: \n");
 			cpu = scanner.next();
 			System.out.println("Ram: \n");
 			ram = scanner.next();
@@ -113,4 +116,20 @@ public class Gestor {
 		}
 		return data;
 	}
+	
+	//FUNCION BUSCAR POR MODELO
+	public void Buscar(TreeMap<String, Ordinador> ordenadores){
+		
+		System.out.println("Search model by name: ");
+		String model = scanner.next();
+		//MOSTRAR DETALLES DEL PC SI EXISTE EL MODELO
+		if(ordenadores.containsKey(model)){
+			ordenadores.get(model).toString();
+		}else{
+			//SI EL MODELO NO EXISTE
+			System.out.println("This model does not exist.");
+		}
+
+	}
+
 }
