@@ -1,10 +1,10 @@
 /*MANUAL DE ESTILOS:
- * EL IDIOMA A LA VISTA DEL PROGRAMA SER¡ EN INGL…S.
- * LOS COMENTARIOS SE HAR¡N EN ESPA—OL Y CON MAY⁄SCULAS PARA SU MEJOR VISTA Y COMPRENSI”N.
- * AL PRINCIPIO DE CADA FUNCI”N ASIGNADA, DEBER¡ INDICARSE QUE EQUIPO LA HA LLEVADO A CABO.
+ * EL IDIOMA A LA VISTA DEL PROGRAMA SER√Å EN INGL√âS.
+ * LOS COMENTARIOS SE HAR√ÅN EN ESPA√ëOL Y CON MAY√öSCULAS PARA SU MEJOR VISTA Y COMPRENSI√ìN.
+ * AL PRINCIPIO DE CADA FUNCI√ìN ASIGNADA, DEBER√Å INDICARSE QUE EQUIPO LA HA LLEVADO A CABO.
  * EL USO DE NOMBRES DE VARIABLES ES LIBRE PARA CADA EQUIPO DE TRABAJO.
- * EL C”DIGO HA DE ESTAR BIEN INDENTADO Y FORMATEADO. (CONTROLANDO ESPACIOS E INTROS PARA QUE SE VEA C”DIGO LIMPIO)
- * RECOMENDACI”N DE USO DE "CTRL + MAYUS + F" PARA ELLO. (INDENTADO CON ESTARDARES DE JAVA).
+ * EL C√ìDIGO HA DE ESTAR BIEN INDENTADO Y FORMATEADO. (CONTROLANDO ESPACIOS E INTROS PARA QUE SE VEA C√ìDIGO LIMPIO)
+ * RECOMENDACI√ìN DE USO DE "CTRL + MAYUS + F" PARA ELLO. (INDENTADO CON ESTARDARES DE JAVA).
 */
 
 package vista;
@@ -17,60 +17,65 @@ import java.util.TreeMap;
 
 public class Main {
 
-	// MEN⁄ PRINCIPAL
+	// MEN√ö PRINCIPAL
 	public static void main(String[] args) {
 
-		int input = 0; // VARIABLE DE USO PARA SELECCI”N DE OPCIONES
+		int input = 0; // VARIABLE DE USO PARA SELECCI√ìN DE OPCIONES
 
-		// DECLARACi”N DE SCANNER PARA LECTURA DE OPCIONES TECLEADAS
+		// DECLARACi√ìN DE SCANNER PARA LECTURA DE OPCIONES TECLEADAS
 		Scanner menu = new Scanner(System.in);
 
-		// DECLARACI”N DEL GESTOR PARA EL USO DE M…TODOS DEL MISMO
+		// DECLARACI√ìN DEL GESTOR PARA EL USO DE M√âTODOS DEL MISMO
 		Gestor gest = new Gestor();
 
-		// DECLARACI”N DEL TREEMAP
+		// DECLARACI√ìN DEL TREEMAP
 		TreeMap<String, Ordinador> tm = new TreeMap<String, Ordinador>();
 
 		while (input != 6) {
-			// MUESTRA DE OPCIONES DEL MEN⁄
+			// MUESTRA DE OPCIONES DEL MEN√ö
 			System.out.print("Choose your option: \n 1 - Add. \n 2 - Search. \n 3 - List. "
 					+ "\n 4 - Save . \n 5 - Open file. \n 6 - Modify. \n 7 - Exit.");
-			input = menu.nextInt();
+			try {
+				input = menu.nextInt();
 
-			// USO DE SWICH PARA EL DIRECCIONAMIENTO DE LAS OPCIONES
-			// SELECIONADAS
-			switch (input) {
-			case 1:
-				System.out.println("Add"); // A—ADIR
-				gest.add(tm);
-				break;
+				// USO DE SWICH PARA EL DIRECCIONAMIENTO DE LAS OPCIONES
+				// SELECIONADAS
+				switch (input) {
+				case 1:
+					System.out.println("Add"); // A√ëADIR
+					gest.add(tm);
+					break;
 
-			case 2:
-				System.out.println("Search"); // BUSCAR
-				break;
+				case 2:
+					System.out.println("Search"); // BUSCAR
+					break;
 
-			case 3:
-				System.out.println("List"); // LISTAR
-				break;
+				case 3:
+					System.out.println("List"); // LISTAR
+					break;
 
-			case 4:
-				System.out.println("Save"); // GUARDAR
-				gest.guardar(tm);
-				break;
-			case 5:
-				System.out.println("OpenFile"); // RECUPERAR
-				break;
+				case 4:
+					System.out.println("Save"); // GUARDAR
+					gest.guardar(tm);
+					break;
+				case 5:
+					System.out.println("OpenFile"); // RECUPERAR
+					break;
 
-			case 6:
-				System.out.println("Modify"); // MODIFICAR
-				tm = gest.modificar(tm);
-				break;
+				case 6:
+					System.out.println("Modify"); // MODIFICAR
+					tm = gest.modificar(tm);
+					break;
 
-			case 7:
-				System.exit(0);
+				case 7:
+					System.exit(0);
 
-			default:
-				break;
+				default:
+					break;
+				}
+			} catch (Exception e) {
+				System.out.println("Introdueix una opci√≥ valida");
+				main(null);
 			}
 		}
 	}
