@@ -59,6 +59,8 @@ public class Main {
 					break;
 				case 5:
 					System.out.println("OpenFile"); // RECUPERAR
+					tm.clear();
+					gest.restoreData(tm);
 					break;
 
 				case 6:
