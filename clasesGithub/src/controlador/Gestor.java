@@ -21,14 +21,16 @@ public class Gestor {
 
     public static void main(String[] args) {
         // TODO Auto-generated method stub
-
     }
-
-    public int add(TreeMap<String, Ordinador> data) {
+    
+    //FUNCIÓN DAMO
+    public int add (TreeMap<String, Ordinador> data) {
+    	
         String model = null;
         String size = null;
         String cpu = null;
         String ram = null;
+        
         try {
             System.out.println("Model: \n");
             model = scanner.next();
@@ -40,6 +42,7 @@ public class Gestor {
             ram = scanner.next();
             Ordinador o = new Ordinador(model, size, cpu, ram);
 			data.put(model, o);
+			
         } catch (Exception e) {
             System.out.println(e);
             return 1;
@@ -47,12 +50,14 @@ public class Gestor {
         return 0;
     }
 
-//    Function Edra
+    //FUNCIÓN EDRA
     public void list(TreeMap<String, Ordinador> tree) {
+    	
         try {
             if (tree.isEmpty()) {
                 System.out.println("The table is empty.");
-            } else {
+            } else 
+            	{
                 Set<String> keys = tree.keySet();
                 String message = "";
                 for (String key : keys) {
@@ -65,15 +70,16 @@ public class Gestor {
         } catch (Exception e) {
             System.err.println("Error" + e);
         }
-
     }
 
+    //FUNCIÓN JODA
 	public void guardar(TreeMap<String, Ordinador> tree){
-	//El usuario deberï¿½ introducir el nombre del fichero en el que guardaremos, y guardaremos el TreeMap directamente
+		
+		//EL USUARIO DEBERÁ INTRODUCIR EL NOMBRE DEL FICHERO EN EL QUE SE VA A GUARDAR. SE GUARDARÁ EL TREEMAP DIRECTAMENTE
 		System.out.println("Please, enter the name of the file to save the TreeMap: \n");
 		String fitxer = scanner.next();
 
-		try{
+		try {
 			ObjectOutputStream out = new ObjectOutputStream(new FileOutputStream(fitxer));
 			   out.writeObject(tree);
 			   out.close();
@@ -82,6 +88,7 @@ public class Gestor {
 			System.out.println(e.getMessage());
 		}
 	}
+	
 	public TreeMap<String, Ordinador> modificar(TreeMap<String, Ordinador> data ){
 		Scanner in=new Scanner(System.in);
 	

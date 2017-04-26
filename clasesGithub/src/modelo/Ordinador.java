@@ -2,7 +2,7 @@ package modelo;
 
 import java.io.Serializable;
 
-public class Ordinador implements Serializable{
+public class Ordinador implements Serializable {
 	
 	//DECLARACIÓN DE ATRIBUTOS DE LA CLASE ORDENADOR
 	private String model="";
@@ -68,7 +68,4 @@ public class Ordinador implements Serializable{
 		this.cpu = cpu;
 		this.ram = ram;
 	}
-
-	
-
 }
