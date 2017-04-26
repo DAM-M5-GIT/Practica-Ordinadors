@@ -57,7 +57,7 @@ public class Main {
                 break;
                 
             case 6: System.out.println("Modify");	//MODIFICAR
-            	gest.modificar(tm);
+            	tm = gest.modificar(tm);
             	break;
             	
             case 7: System.exit(0);

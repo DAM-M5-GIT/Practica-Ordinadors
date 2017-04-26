@@ -88,7 +88,7 @@ public class Gestor {
 			System.out.println(e.getMessage());
 		}
 	}
-	
+	// FUNCTION UTCA --> DESTINADA A LA MODIFICACION DE UN ORDENADOR
 	public TreeMap<String, Ordinador> modificar(TreeMap<String, Ordinador> data ){
 		Scanner in=new Scanner(System.in);
 	
