@@ -20,6 +20,7 @@ public class Main {
 	// MENÚ PRINCIPAL
 	public static void main(String[] args) {
 
+<<<<<<< HEAD
 		int input = 0; // VARIABLE DE USO PARA SELECCIÓN DE OPCIONES
 
 		// DECLARACÍÓN DE SCANNER PARA LECTURA DE OPCIONES TECLEADAS
@@ -78,5 +79,55 @@ public class Main {
 				main(null);
 			}
 		}
+=======
+            int input = 0; // VARIABLE DE USO PARA SELECCIï¿½N DE OPCIONES
+     
+            //DECLARACiï¿½N DE SCANNER PARA LECTURA DE OPCIONES TECLEADAS
+            Scanner menu = new Scanner(System.in);
+        	
+            //DECLARACIï¿½N DEL GESTOR PARA EL USO DE Mï¿½TODOS DEL MISMO
+        	Gestor gest = new Gestor();
+        	
+        	//DECLARACIï¿½N DEL TREEMAP
+        	TreeMap<String, Ordinador> tm = new TreeMap<String, Ordinador>();
+
+            while(input != 6)
+            {
+            	//MUESTRA DE OPCIONES DEL MENï¿½
+            System.out.print("Choose your option: \n 1 - Add. \n 2 - Search. \n 3 - List. "	+
+            					"\n 4 - Save . \n 5 - Open file. \n 6 - Modify. \n 7 - Exit.");
+            input = menu.nextInt();
+            
+            //USO DE SWICH PARA EL DIRECCIONAMIENTO DE LAS OPCIONES SELLECIONADAS
+            switch (input) {
+            case 1: System.out.println("Add"); //Aï¿½adir();
+                break;
+
+            case 2: System.out.println("Search");//Buscar();
+                break;
+
+            case 3: System.out.println("List");//Llistar();
+                    gest.list(tm);
+                break;
+
+            case 4: System.out.println("Save");//Guardar();
+            		gest.guardar(tm);
+                break;
+            case 5: System.out.println("OpenFile");//Recuperar();
+		            tm.clear();
+		            gest.restoreData(tm);
+                break;
+                
+            case 6: System.out.println("Modify");//Modificar();
+            	gest.modificar(tm);
+            	break;
+            	
+            case 7: System.exit(0);
+            
+            default: 
+            	break;
+            }
+        }
+>>>>>>> ba4cf300d6b447582c307b223ee487adbef9429d
 	}
 }
