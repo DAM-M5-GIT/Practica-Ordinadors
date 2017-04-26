@@ -22,7 +22,7 @@ public class Gestor {
 		// TODO Auto-generated method stub
 	}
 
-	// FUNCIï¿½N DAMO
+	// FUNCIÓN DAMO
 	public int add(TreeMap<String, Ordinador> data) {
 
 		String model = null;
@@ -52,7 +52,7 @@ public class Gestor {
 		return 0;
 	}
 
-	// FUNCIï¿½N EDRA
+	// FUNCIÓN EDRA
 	public void list(TreeMap<String, Ordinador> tree) {
 
 		try {
@@ -72,11 +72,11 @@ public class Gestor {
 		}
 	}
 
-	// FUNCIï¿½N JODA
+	// FUNCIÓN JODA
 	public void guardar(TreeMap<String, Ordinador> tree) {
 
-		// EL USUARIO DEBERï¿½ INTRODUCIR EL NOMBRE DEL FICHERO EN EL QUE SE VA A GUARDAR.
-		// SE GUARDARï¿½ EL TREEMAP DIRECTAMENTE
+		// EL USUARIO DEBERÁ INTRODUCIR EL NOMBRE DEL FICHERO EN EL QUE SE VA A GUARDAR.
+		// SE GUARDARÁ EL TREEMAP DIRECTAMENTE
 		System.out.println("Please, enter the name of the file to save the TreeMap: \n");
 		String fitxer = scanner.next();
 
@@ -89,7 +89,7 @@ public class Gestor {
 		}
 	}
 
-	// FUNCTION UTCA --> DESTINADA A LA MODIFICACION DE UN ORDENADOR
+	// FUNCIÓN UTCA --> DESTINADA A LA MODIFICACIÓN DE UN ORDENADOR
 	public TreeMap<String, Ordinador> modificar(TreeMap<String, Ordinador> data) {
 		Scanner in = new Scanner(System.in);
 
@@ -117,11 +117,12 @@ public class Gestor {
 		return data;
 	}
 	
-	//FUNCION DAMO - FUNCION PARA BUSCAR MODELO DEL PC
+	//FUNCION DAMO - FUNCIÓN PARA BUSCAR MODELO DEL PC
 	public void Buscar(TreeMap<String, Ordinador> ordenadores){
 		
 		System.out.println("Search model by name: ");
 		String model = scanner.next();
+		
 		//MOSTRAR DETALLES DEL PC SI EXISTE EL MODELO
 		if(ordenadores.containsKey(model)){
 			ordenadores.get(model).toString();
