@@ -21,80 +21,6 @@ public class Gestor {
 
 	private Scanner scanner = new Scanner(System.in);
 
-	public static void main(String[] args) {
-		// TODO Auto-generated method stub
-	}
-
-	// FUNCIÓN DAMO
-	public int add(TreeMap<String, Ordinador> data) {
-
-		String model = null;
-		String size = null;
-		String cpu = null;
-		String ram = null;
-
-		try {
-			System.out.println("Model: \n");
-			model = scanner.next();
-			System.out.println("Size: \n");
-			size = scanner.next();
-			System.out.println("CPU: \n");
-			cpu = scanner.next();
-			System.out.println("Ram: \n");
-			ram = scanner.next();
-			Ordinador o = new Ordinador(model, size, cpu, ram);
-			data.put(model, o);
-
-		} catch (Exception e) {
-			System.out.println(e);
-			return 1;
-		}
-		return 0;
-	}
-
-	// FUNCIÓN EDRA
-	public void list(TreeMap<String, Ordinador> tree) {
-
-		try {
-			if (tree.isEmpty()) {
-				System.out.println("The table is empty.");
-			} else {
-				Set<String> keys = tree.keySet();
-				String message = "";
-				for (String key : keys) {
-					message = message + " | MODEL: " + tree.get(key).getModel() + " | SIZE: " + tree.get(key).getSize()
-							+ " | RAM: " + tree.get(key).getRam() + "  | CPU: " + tree.get(key).getCpu() + "\n";
-				}
-				System.out.println(message);
-			}
-		} catch (Exception e) {
-			System.err.println("Error" + e);
-		}
-	}
-
-	// FUNCIÓN JODA
-	public void guardar(TreeMap<String, Ordinador> tree) {
-
-		// EL USUARIO DEBERÁ INTRODUCIR EL NOMBRE DEL FICHERO EN EL QUE SE VA A GUARDAR.
-		// SE GUARDARÁ EL TREEMAP DIRECTAMENTE
-		System.out.println("Please, enter the name of the file to save the TreeMap: \n");
-		String fitxer = scanner.next();
-
-		try {
-			ObjectOutputStream out = new ObjectOutputStream(new FileOutputStream(fitxer));
-			out.writeObject(tree);
-			out.close();
-		} catch (Exception e) {
-			System.out.println(e.getMessage());
-		}
-	}
-<<<<<<< HEAD
-
-	// FUNCTION UTCA --> DESTINADA A LA MODIFICACION DE UN ORDENADOR
-	public TreeMap<String, Ordinador> modificar(TreeMap<String, Ordinador> data) {
-		Scanner in = new Scanner(System.in);
-
-=======
 	public void restoreData(TreeMap<String, Ordinador> tree)
 	{
 		System.out.println("Enter the file's name which data shall be restored: \n");
@@ -116,32 +42,5 @@ public class Gestor {
 		{
 			System.out.println("Can't find file, check file name and try it again");
 		}
-	}
-	public TreeMap<String, Ordinador> modificar(TreeMap<String, Ordinador> data ){
-		Scanner in=new Scanner(System.in);
-	
->>>>>>> ba4cf300d6b447582c307b223ee487adbef9429d
-		System.out.println("INTRODUCE THE MODEL TO MODIFY : ");
-		String model = in.next();
-		if (data.containsKey(model)) {
-			System.out.println("INTRODUCE THE NEW RAM VALUE : ");
-			String ram = in.next();
-			System.out.println("INTRODUCE THE NEW CPU MODEL : ");
-			String cpu = in.next();
-			System.out.println("INTRODUCE THE NEW STORAGE CAPACITY : ");
-			String size = in.next();
-
-			System.out.print("Save Changes? ( Y / N )");
-			String input = in.next();
-			if (input == "Y") {
-				Ordinador o = new Ordinador(model, size, cpu, ram);
-				data.put(model, o);
-			} else {
-				System.out.println("CHANGES HAVE BEEN DISCARDED");
-			}
-		} else {
-			System.out.println("THE MODEL DOES NOT EXISTS");
-		}
-		return data;
 	}
 }
