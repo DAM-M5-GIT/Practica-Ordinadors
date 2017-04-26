@@ -5,10 +5,10 @@ import java.io.Serializable;
 public class Ordinador implements Serializable {
 
 	// DECLARACIÓN DE ATRIBUTOS DE LA CLASE ORDENADOR
-	private String model = "";
-	private String size = "";
-	private String cpu = "";
-	private String ram = "";
+	private String model;
+	private String size;
+	private String cpu;
+	private String ram;
 
 	// SETTERS , GETTERS y CONSTRUCTORES
 	public String getModel() {
