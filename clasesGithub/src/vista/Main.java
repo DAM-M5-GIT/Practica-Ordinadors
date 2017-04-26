@@ -20,6 +20,7 @@ public class Main {
 	// MENÚ PRINCIPAL
 	public static void main(String[] args) {
 
+
 		int input = 0; // VARIABLE DE USO PARA SELECCIÓN DE OPCIONES
 
 		// DECLARACÍÓN DE SCANNER PARA LECTURA DE OPCIONES TECLEADAS
@@ -43,7 +44,6 @@ public class Main {
 				switch (input) {
 				case 1:
 					System.out.println("Add"); // AÑADIR
-					gest.add(tm);
 					break;
 
 				case 2:
@@ -56,15 +56,15 @@ public class Main {
 
 				case 4:
 					System.out.println("Save"); // GUARDAR
-					gest.guardar(tm);
 					break;
 				case 5:
 					System.out.println("OpenFile"); // RECUPERAR
+					tm.clear();
+					gest.restoreData(tm);
 					break;
 
 				case 6:
 					System.out.println("Modify"); // MODIFICAR
-					tm = gest.modificar(tm);
 					break;
 
 				case 7:
