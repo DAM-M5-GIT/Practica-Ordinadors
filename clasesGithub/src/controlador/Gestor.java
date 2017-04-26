@@ -22,7 +22,7 @@ public class Gestor {
 		// TODO Auto-generated method stub
 	}
 
-	// FUNCIÓN DAMO
+	// FUNCIï¿½N DAMO
 	public int add(TreeMap<String, Ordinador> data) {
 
 		String model = null;
@@ -52,7 +52,7 @@ public class Gestor {
 		return 0;
 	}
 
-	// FUNCIÓN EDRA
+	// FUNCIï¿½N EDRA
 	public void list(TreeMap<String, Ordinador> tree) {
 
 		try {
@@ -72,11 +72,11 @@ public class Gestor {
 		}
 	}
 
-	// FUNCIÓN JODA
+	// FUNCIï¿½N JODA
 	public void guardar(TreeMap<String, Ordinador> tree) {
 
-		// EL USUARIO DEBERÁ INTRODUCIR EL NOMBRE DEL FICHERO EN EL QUE SE VA A GUARDAR.
-		// SE GUARDARÁ EL TREEMAP DIRECTAMENTE
+		// EL USUARIO DEBERï¿½ INTRODUCIR EL NOMBRE DEL FICHERO EN EL QUE SE VA A GUARDAR.
+		// SE GUARDARï¿½ EL TREEMAP DIRECTAMENTE
 		System.out.println("Please, enter the name of the file to save the TreeMap: \n");
 		String fitxer = scanner.next();
 
@@ -117,7 +117,7 @@ public class Gestor {
 		return data;
 	}
 	
-	//FUNCION BUSCAR POR MODELO
+	//FUNCION DAMO - FUNCION PARA BUSCAR MODELO DEL PC
 	public void Buscar(TreeMap<String, Ordinador> ordenadores){
 		
 		System.out.println("Search model by name: ");
