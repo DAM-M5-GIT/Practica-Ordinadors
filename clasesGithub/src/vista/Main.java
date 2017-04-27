@@ -64,6 +64,7 @@ public class Main {
 
 				case 6:
 					System.out.println("Modify"); // MODIFICAR
+					tm=gest.modificar(tm);
 					break;
 
 				case 7:
