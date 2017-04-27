@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 # Created by .ignore support plugin (hsz.mobi)
 ### Java template
 # Compiled class file
@@ -26,6 +27,9 @@ hs_err_pid*
 
 /clasesGithub/.gitignore
 /.idea
+=======
+/bin/
+>>>>>>> origin/utca
 =======
 /bin/
 >>>>>>> origin/utca
