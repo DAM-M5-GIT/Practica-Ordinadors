@@ -25,7 +25,7 @@ public class Gestor {
 		// TODO Auto-generated method stub
 	}
 
-	// FUNCIÓN DAMO
+	// FUNCIï¿½N DAMO
 	public int add(TreeMap<String, Ordinador> data) {
 
 		String model = null;
@@ -55,7 +55,7 @@ public class Gestor {
 		return 0;
 	}
 
-	// FUNCIÓN EDRA
+	// FUNCIï¿½N EDRA
 	public void list(TreeMap<String, Ordinador> tree) {
 
 		try {
@@ -75,11 +75,11 @@ public class Gestor {
 		}
 	}
 
-	// FUNCIÓN JODA
+	// FUNCIï¿½N JODA
 	public void guardar(TreeMap<String, Ordinador> tree) {
 
-		// EL USUARIO DEBERÁ INTRODUCIR EL NOMBRE DEL FICHERO EN EL QUE SE VA A GUARDAR.
-		// SE GUARDARÁ EL TREEMAP DIRECTAMENTE
+		// EL USUARIO DEBERï¿½ INTRODUCIR EL NOMBRE DEL FICHERO EN EL QUE SE VA A GUARDAR.
+		// SE GUARDARï¿½ EL TREEMAP DIRECTAMENTE
 		System.out.println("Please, enter the name of the file to save the TreeMap: \n");
 		String fitxer = scanner.next();
 
@@ -92,7 +92,7 @@ public class Gestor {
 		}
 	}
 
-	// FUNCIÓN UTCA --> DESTINADA A LA MODIFICACIÓN DE UN ORDENADOR
+	// FUNCIï¿½N UTCA --> DESTINADA A LA MODIFICACIï¿½N DE UN ORDENADOR
 	public TreeMap<String, Ordinador> modificar(TreeMap<String, Ordinador> data) {
 		Scanner in = new Scanner(System.in);
 
@@ -144,20 +144,22 @@ public class Gestor {
 		}
 	}
 	
-	//FUNCION DAMO - FUNCIÓN PARA BUSCAR MODELO DEL PC
-	public void Buscar(TreeMap<String, Ordinador> ordenadores){
-		
+	//FUNCION DAMO - FUNCIï¿½N PARA BUSCAR MODELO DEL PC
+	public void search(TreeMap<String, Ordinador> ordenadores){
+
+		String message ="";
 		System.out.println("Search model by name: ");
 		String model = scanner.next();
-		
-		//MOSTRAR DETALLES DEL PC SI EXISTE EL MODELO
+		//SI ENCRUENTRA EL MODELO, MOSTRAMOS LOS DETALLES DEL PC SI EXISTE
 		if(ordenadores.containsKey(model)){
-			ordenadores.get(model).toString();
+		message = message + " Model = " + ordenadores.get(model).getModel()+ 
+		", Size = " + ordenadores.get(model).getSize()+
+		", Ram = " + ordenadores.get(model).getRam() +
+		"i Cpu = " + ordenadores.get(model).getCpu();
+		System.out.println("Computer: [ "+message+" ]");
 		}else{
-			//SI EL MODELO NO EXISTE
-			System.out.println("This model does not exist.");
+		//SI EL MODELO NO EXISTE
+		System.out.println("This model does not exist.");	
+			}
 		}
-
-	}
-
 }

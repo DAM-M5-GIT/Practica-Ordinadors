@@ -43,18 +43,22 @@ public class Main {
 				switch (input) {
 				case 1:
 					System.out.println("Add"); // A�ADIR
+					gest.add(tm);
 					break;
 
 				case 2:
 					System.out.println("Search"); // BUSCAR
+					gest.search(tm);
 					break;
 
 				case 3:
 					System.out.println("List"); // LISTAR
+					gest.list(tm);
 					break;
 
 				case 4:
 					System.out.println("Save"); // GUARDAR
+					gest.guardar(tm);
 					break;
 				case 5:
 					System.out.println("OpenFile"); // RECUPERAR
