@@ -21,7 +21,7 @@ public class Gestor {
 
 	private Scanner scanner = new Scanner(System.in);
 
-	public void restoreData(TreeMap<String, Ordinador> tree)
+	public TreeMap<String, Ordinador> restoreData(TreeMap<String, Ordinador> tree)
 	{
 		System.out.println("Enter the file's name which data shall be restored: \n");
 		String file = scanner.next();
@@ -42,5 +42,6 @@ public class Gestor {
 		{
 			System.out.println("Can't find file, check file name and try it again");
 		}
+		return tree;
 	}
 }

@@ -60,7 +60,7 @@ public class Main {
 				case 5:
 					System.out.println("OpenFile"); // RECUPERAR
 					tm.clear();
-					gest.restoreData(tm);
+					tm=gest.restoreData(tm);
 					break;
 
 				case 6:
