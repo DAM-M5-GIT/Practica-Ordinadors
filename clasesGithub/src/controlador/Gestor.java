@@ -95,14 +95,14 @@ public class Gestor {
 		Scanner in = new Scanner(System.in);
 
 		System.out.println("INTRODUCE THE MODEL TO MODIFY : ");
-		String model = in.next();
+		String model = in.nextLine();
 		if (data.containsKey(model)) {
 			System.out.println("INTRODUCE THE NEW RAM VALUE : ");
-			String ram = in.next();
+			String ram = in.nextLine();
 			System.out.println("INTRODUCE THE NEW CPU MODEL : ");
-			String cpu = in.next();
+			String cpu = in.nextLine();
 			System.out.println("INTRODUCE THE NEW STORAGE CAPACITY : ");
-			String size = in.next();
+			String size = in.nextLine();
 
 			System.out.print("Save Changes? ( Y / N )");
 			String input = in.next();
@@ -141,7 +141,7 @@ public class Gestor {
 
 		String message = "";
 		System.out.println("Search model by name: ");
-		String model = scanner.next();
+		String model = scanner.nextLine();
 		// SI ENCRUENTRA EL MODELO, MOSTRAMOS LOS DETALLES DEL PC SI EXISTE
 		if (ordenadores.containsKey(model)) {
 			message = message + " Model = " + ordenadores.get(model).getModel() + ", Size = "
