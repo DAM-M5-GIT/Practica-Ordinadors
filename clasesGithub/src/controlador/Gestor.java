@@ -26,7 +26,7 @@ public class Gestor {
 	}
 
 	// FUNCI�N DAMO
-	public int add(TreeMap<String, Ordinador> data) {
+	public void add(TreeMap<String, Ordinador> data) {
 
 		String model = null;
 		String size = null;
@@ -34,22 +34,33 @@ public class Gestor {
 		String ram = null;
 
 		try {
-			System.out.println("Model: \n");
-			model = scanner.nextLine();
-			System.out.println("HDD Size: \n");
-			size = scanner.nextLine();
-			System.out.println("Processador: \n");
-			cpu = scanner.nextLine();
-			System.out.println("Ram: \n");
-			ram = scanner.nextLine();
+			do
+			{
+				System.out.println("Model: \n");
+				model = scanner.nextLine();
+			}while(model.isEmpty());
+			do
+			{
+				System.out.println("HDD Size: \n");
+				size = scanner.nextLine();
+			}while(size.isEmpty());
+			do
+			{
+				System.out.println("Processador: \n");
+				cpu = scanner.nextLine();
+			}while(cpu.isEmpty());
+			do
+			{
+				System.out.println("Ram: \n");
+				ram = scanner.nextLine();
+			}while(ram.isEmpty());
+
 			Ordinador o = new Ordinador(model, size, cpu, ram);
 			data.put(model, o);
 
 		} catch (Exception e) {
 			System.out.println(e);
-			return 1;
 		}
-		return 0;
 	}
 
 	// FUNCI�N EDRA
