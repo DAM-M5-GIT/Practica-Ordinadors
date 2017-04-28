@@ -35,16 +35,13 @@ public class Gestor {
 
 		try {
 			System.out.println("Model: \n");
-			model = scanner.next();
-			System.out.println("Size: \n");
-			size = scanner.next();
-			System.out.println("CPU: \n");
-			System.out.println("Tama�o: \n");
-			size = scanner.next();
+			model = scanner.nextLine();
+			System.out.println("HDD Size: \n");
+			size = scanner.nextLine();
 			System.out.println("Processador: \n");
-			cpu = scanner.next();
+			cpu = scanner.nextLine();
 			System.out.println("Ram: \n");
-			ram = scanner.next();
+			ram = scanner.nextLine();
 			Ordinador o = new Ordinador(model, size, cpu, ram);
 			data.put(model, o);
 
@@ -78,7 +75,8 @@ public class Gestor {
 	// FUNCI�N JODA
 	public void guardar(TreeMap<String, Ordinador> tree) {
 
-		// EL USUARIO DEBER� INTRODUCIR EL NOMBRE DEL FICHERO EN EL QUE SE VA A GUARDAR.
+		// EL USUARIO DEBER� INTRODUCIR EL NOMBRE DEL FICHERO EN EL QUE SE VA
+		// A GUARDAR.
 		// SE GUARDAR� EL TREEMAP DIRECTAMENTE
 		System.out.println("Please, enter the name of the file to save the TreeMap: \n");
 		String fitxer = scanner.next();
@@ -108,58 +106,51 @@ public class Gestor {
 
 			System.out.print("Save Changes? ( Y / N )");
 			String input = in.next();
-			if (input == "Y") {
+			if (input.equals("Y") | input.equals("y")) {
 				Ordinador o = new Ordinador(model, size, cpu, ram);
 				data.put(model, o);
 			} else {
 				System.out.println("CHANGES HAVE BEEN DISCARDED");
 			}
-		}else {
+		} else {
 			System.out.println("THE MODEL DOES NOT EXIST");
 		}
 		return data;
 	}
-	
 
-	public void restoreData(TreeMap<String, Ordinador> tree)
-	{
+	public TreeMap<String, Ordinador> restoreData(TreeMap<String, Ordinador> tree) {
 		System.out.println("Enter the file's name which data shall be restored: \n");
 		String file = scanner.next();
 		File fileToRead = new File(file);
-		if(fileToRead.exists())
-		{
-			try
-			{
+		if (fileToRead.exists()) {
+			try {
 				ObjectInputStream inputData = new ObjectInputStream(new FileInputStream(file));
 				tree = (TreeMap<String, Ordinador>) inputData.readObject();
 				inputData.close();
-			}
-			catch(Exception e){
+			} catch (Exception e) {
 				System.out.println(e.getMessage());
 			}
-		}
-		else
-		{
+		} else {
 			System.out.println("Can't find file, check file name and try it again");
 		}
+		return tree;
 	}
-	
-	//FUNCION DAMO - FUNCI�N PARA BUSCAR MODELO DEL PC
-	public void search(TreeMap<String, Ordinador> ordenadores){
 
-		String message ="";
+	// FUNCION DAMO - FUNCI�N PARA BUSCAR MODELO DEL PC
+	public void search(TreeMap<String, Ordinador> ordenadores) {
+
+		String message = "";
 		System.out.println("Search model by name: ");
 		String model = scanner.next();
-		//SI ENCRUENTRA EL MODELO, MOSTRAMOS LOS DETALLES DEL PC SI EXISTE
-		if(ordenadores.containsKey(model)){
-		message = message + " Model = " + ordenadores.get(model).getModel()+ 
-		", Size = " + ordenadores.get(model).getSize()+
-		", Ram = " + ordenadores.get(model).getRam() +
-		"i Cpu = " + ordenadores.get(model).getCpu();
-		System.out.println("Computer: [ "+message+" ]");
-		}else{
-		//SI EL MODELO NO EXISTE
-		System.out.println("This model does not exist.");	
-			}
+		// SI ENCRUENTRA EL MODELO, MOSTRAMOS LOS DETALLES DEL PC SI EXISTE
+		if (ordenadores.containsKey(model)) {
+			message = message + " Model = " + ordenadores.get(model).getModel() + ", Size = "
+					+ ordenadores.get(model).getSize() + ", Ram = " + ordenadores.get(model).getRam() + "i Cpu = "
+					+ ordenadores.get(model).getCpu();
+			System.out.println("Computer: [ " + message + " ]");
+		} else {
+			// SI EL MODELO NO EXISTE
+			System.out.println("This model does not exist.");
 		}
+	}
 }

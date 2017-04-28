@@ -8,6 +8,7 @@
 */
 
 package vista;
+
 import controlador.Gestor;
 import modelo.Ordinador;
 
@@ -18,7 +19,6 @@ public class Main {
 
 	// MEN� PRINCIPAL
 	public static void main(String[] args) {
-
 
 		int input = 0; // VARIABLE DE USO PARA SELECCI�N DE OPCIONES
 
@@ -45,17 +45,14 @@ public class Main {
 					System.out.println("Add"); // A�ADIR
 					gest.add(tm);
 					break;
-
 				case 2:
 					System.out.println("Search"); // BUSCAR
 					gest.search(tm);
 					break;
-
 				case 3:
 					System.out.println("List"); // LISTAR
 					gest.list(tm);
 					break;
-
 				case 4:
 					System.out.println("Save"); // GUARDAR
 					gest.guardar(tm);
@@ -63,17 +60,14 @@ public class Main {
 				case 5:
 					System.out.println("OpenFile"); // RECUPERAR
 					tm.clear();
-					gest.restoreData(tm);
+					tm = gest.restoreData(tm);
 					break;
-
 				case 6:
 					System.out.println("Modify"); // MODIFICAR
-					tm=gest.modificar(tm);
+					tm = gest.modificar(tm);
 					break;
-
 				case 7:
 					System.exit(0);
-
 				default:
 					break;
 				}
