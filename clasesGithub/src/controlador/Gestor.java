@@ -34,26 +34,22 @@ public class Gestor {
 		String ram = null;
 
 		try {
-			do
-			{
+			do {
 				System.out.println("Model: \n");
 				model = scanner.nextLine();
-			}while(model.isEmpty());
-			do
-			{
+			} while (model.isEmpty());
+			do {
 				System.out.println("HDD Size: \n");
 				size = scanner.nextLine();
-			}while(size.isEmpty());
-			do
-			{
+			} while (size.isEmpty());
+			do {
 				System.out.println("Processador: \n");
 				cpu = scanner.nextLine();
-			}while(cpu.isEmpty());
-			do
-			{
+			} while (cpu.isEmpty());
+			do {
 				System.out.println("Ram: \n");
 				ram = scanner.nextLine();
-			}while(ram.isEmpty());
+			} while (ram.isEmpty());
 
 			Ordinador o = new Ordinador(model, size, cpu, ram);
 			data.put(model, o);
@@ -104,16 +100,24 @@ public class Gestor {
 	// FUNCI�N UTCA --> DESTINADA A LA MODIFICACI�N DE UN ORDENADOR
 	public TreeMap<String, Ordinador> modificar(TreeMap<String, Ordinador> data) {
 		Scanner in = new Scanner(System.in);
-
+		String ram = "";
+		String cpu = "";
+		String size = "";
 		System.out.println("INTRODUCE THE MODEL TO MODIFY : ");
 		String model = in.nextLine();
 		if (data.containsKey(model)) {
-			System.out.println("INTRODUCE THE NEW RAM VALUE : ");
-			String ram = in.nextLine();
-			System.out.println("INTRODUCE THE NEW CPU MODEL : ");
-			String cpu = in.nextLine();
-			System.out.println("INTRODUCE THE NEW STORAGE CAPACITY : ");
-			String size = in.nextLine();
+			do {
+				System.out.println("INTRODUCE THE NEW RAM VALUE : ");
+				ram = in.nextLine();
+			} while (ram.isEmpty());
+			do {
+				System.out.println("INTRODUCE THE NEW CPU MODEL : ");
+				cpu = in.nextLine();
+			} while (cpu.isEmpty());
+			do {
+				System.out.println("INTRODUCE THE NEW STORAGE CAPACITY : ");
+				size = in.nextLine();
+			} while (size.isEmpty());
 
 			System.out.print("Save Changes? ( Y / N )");
 			String input = in.next();
